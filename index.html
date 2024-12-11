@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos | Lista</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+    <div class="container">
+        <div id="welcome">
+            <h1>Bem-vindo à Sua Agenda de Contatos Digital</h1>
+            <p>Sua lista de contatos mais organizada e acessível, com tudo o que você precisa ao seu alcance.</p>
+            <button id="start-btn">Ver contatos</button>
+        </div>
+        <div id="container-content" class="hide">
+            <header class="menu">
+                <h2>Contatos <span id="number-contacts"></span></h2>
+                <div id="add-contact">
+                    <button id="add-btn">
+                        <i class="fa-solid fa-plus"></i>Criar contato
+                    </button>
+                </div>
+            </header>
+            <main class="contact-container">
+                <ul class="contact-list">
+                    <li class="contact-header">
+                        <p class="contact-name">Nome</p>
+                        <p class="phone-number">Telefone</p>
+                    </li>
+                </ul>
+                <div id="create-fade" class="hide"></div>
+                <div id="create-contact" class="hide">
+                    <div class="modal-header">
+                        <h2>Novo contato</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-modal">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="name" id="input-name" placeholder="Digite o nome">
+                        </div>
+                        <div class="input-modal">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" name="phone" id="input-phone" placeholder="(xx) xxxxx-xxxx">
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="modal-btn" id="close-create">Cancelar</button>
+                        <button class="modal-btn" id="save-create">Salvar</button>
+                    </div>
+                </div>
+                <div id="edit-fade" class="hide"></div>
+                <div id="edit-contact" class="hide">
+                    <div class="modal-header">
+                        <h2>Editar contato</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-modal">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="name" id="edit-name" placeholder="Digite o nome">
+                        </div>
+                        <div class="input-modal">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" name="phone" id="edit-phone" placeholder="(xx) xxxxx-xxxx">
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="modal-btn" id="close-edit">Cancelar</button>
+                        <button class="modal-btn" id="save-edit">Salvar</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+</body>
+
+</html>
